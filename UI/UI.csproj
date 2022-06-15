@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2C58FBD-CECD-4C5F-B1D7-07190249045C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Styles\AddButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Styles\CloseButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Styles\HeaderViewStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\HeaderViewStyle.Designer.cs">
+      <DependentUpon>HeaderViewStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\NavItemStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\NavItemStyle.Designer.cs">
+      <DependentUpon>NavItemStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\RoomStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\RoomStyle.Designer.cs">
+      <DependentUpon>RoomStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\RoundBorderButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Styles\RoundPictureStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Styles\RowTableStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\RowTableStyle.Designer.cs">
+      <DependentUpon>RowTableStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SaveButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Styles\TableStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\TableStyle.Designer.cs">
+      <DependentUpon>TableStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\VMControl.cs" />
+    <Compile Include="ViewModels\BookingViewModel.cs" />
+    <Compile Include="ViewModels\ChartViewModel.cs" />
+    <Compile Include="ViewModels\Controller.cs" />
+    <Compile Include="Utils\Convertor.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\IncomeViewModel.cs" />
+    <Compile Include="ViewModels\NavModel.cs" />
+    <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\PaymentViewModel.cs" />
+    <Compile Include="ViewModels\ProfileViewModel.cs" />
+    <Compile Include="ViewModels\RoomConfigViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Views\CustomerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IncomeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\IncomeView.Designer.cs">
+      <DependentUpon>IncomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChartView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ChartView.Designer.cs">
+      <DependentUpon>ChartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentView.Designer.cs">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BookingView.Designer.cs">
+      <DependentUpon>BookingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProfileView.Designer.cs">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomConfigView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RoomConfigView.Designer.cs">
+      <DependentUpon>RoomConfigView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wrappers\BillWrapper.cs" />
+    <Compile Include="Wrappers\BookingWrapper.cs" />
+    <Compile Include="Wrappers\CustomerWrapper.cs" />
+    <Compile Include="Wrappers\IncomeWrapper.cs" />
+    <Compile Include="Wrappers\ModelWrapper.cs" />
+    <Compile Include="Wrappers\PaymentWrapper.cs" />
+    <Compile Include="Wrappers\RoomWrapper.cs" />
+    <Compile Include="Wrappers\UserWrapper.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Styles\HeaderViewStyle.resx">
+      <DependentUpon>HeaderViewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Styles\NavItemStyle.resx">
+      <DependentUpon>NavItemStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Styles\RoomStyle.resx">
+      <DependentUpon>RoomStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Styles\RowTableStyle.resx">
+      <DependentUpon>RowTableStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Styles\TableStyle.resx">
+      <DependentUpon>TableStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChartView.resx">
+      <DependentUpon>ChartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\IncomeView.resx">
+      <DependentUpon>IncomeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BookingView.resx">
+      <DependentUpon>BookingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentView.resx">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProfileView.resx">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RoomConfigView.resx">
+      <DependentUpon>RoomConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-cancel-400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{CFA6315B-1B09-494B-B892-4BDF6EB6D311}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{4AE0EFB1-5BF7-44D8-A886-1BEF9866DBF5}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-close-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\istockphoto-1191640863-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-hotel-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-close-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-subtract-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-edit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-plus-math-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-trash-can-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-save-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-picture-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-customer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-hotel-check-in-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-hotel-check-out-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-open-door-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-expensive-price-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,6 @@
+C:\Users\chang\Desktop\HoangTrong\HotelManager\Models\bin\Debug\Models.dll
+C:\Users\chang\Desktop\HoangTrong\HotelManager\Models\bin\Debug\Models.pdb
+C:\Users\chang\Desktop\HoangTrong\HotelManager\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\chang\Desktop\HoangTrong\HotelManager\Models\obj\Debug\Models.dll
+C:\Users\chang\Desktop\HoangTrong\HotelManager\Models\obj\Debug\Models.pdb
+C:\Users\chang\Desktop\HoangTrong\HotelManager\Models\obj\Debug\Models.csproj.AssemblyReference.cache
